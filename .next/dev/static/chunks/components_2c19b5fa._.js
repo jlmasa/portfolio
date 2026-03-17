@@ -2299,34 +2299,47 @@ function CursorTracker() {
     const cursorRingRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "CursorTracker.useEffect": ()=>{
-            // Touch/mobile devices don't have a mouse cursor — bail out entirely
             if (window.matchMedia("(pointer: coarse)").matches) return;
             const cursor = cursorRef.current;
             const ring = cursorRingRef.current;
             if (!cursor || !ring) return;
-            // Make elements visible now that we know it's a pointer device
             cursor.style.display = "block";
             ring.style.display = "block";
             let mouseX = 0, mouseY = 0;
             let ringX = 0, ringY = 0;
             let rafId;
+            let isRunning = false;
             const onMouseMove = {
                 "CursorTracker.useEffect.onMouseMove": (e)=>{
                     mouseX = e.clientX;
                     mouseY = e.clientY;
-                    cursor.style.transform = `translate(${mouseX - 5}px, ${mouseY - 5}px)`;
+                    // Dot: updated directly in the event — zero RAF overhead, zero lerp delay
+                    cursor.style.transform = `translate3d(${mouseX - 5}px, ${mouseY - 5}px, 0)`;
+                    // Start the ring loop only when it's not already ticking
+                    if (!isRunning) {
+                        isRunning = true;
+                        rafId = requestAnimationFrame(animateRing);
+                    }
                 }
             }["CursorTracker.useEffect.onMouseMove"];
-            const animate = {
-                "CursorTracker.useEffect.animate": ()=>{
-                    ringX += (mouseX - ringX - 18) * 0.12;
-                    ringY += (mouseY - ringY - 18) * 0.12;
-                    ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
-                    rafId = requestAnimationFrame(animate);
+            const animateRing = {
+                "CursorTracker.useEffect.animateRing": ()=>{
+                    const dx = mouseX - ringX - 18;
+                    const dy = mouseY - ringY - 18;
+                    ringX += dx * 0.15;
+                    ringY += dy * 0.15;
+                    ring.style.transform = `translate3d(${ringX}px, ${ringY}px, 0)`;
+                    // Keep ticking until the ring has caught up within 0.5px, then stop
+                    if (Math.abs(dx) > 0.5 || Math.abs(dy) > 0.5) {
+                        rafId = requestAnimationFrame(animateRing);
+                    } else {
+                        isRunning = false;
+                    }
                 }
-            }["CursorTracker.useEffect.animate"];
-            window.addEventListener("mousemove", onMouseMove);
-            rafId = requestAnimationFrame(animate);
+            }["CursorTracker.useEffect.animateRing"];
+            window.addEventListener("mousemove", onMouseMove, {
+                passive: true
+            });
             return ({
                 "CursorTracker.useEffect": ()=>{
                     window.removeEventListener("mousemove", onMouseMove);
@@ -2335,7 +2348,6 @@ function CursorTracker() {
             })["CursorTracker.useEffect"];
         }
     }["CursorTracker.useEffect"], []);
-    // Hidden by default — shown via JS only on pointer devices above
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2346,7 +2358,7 @@ function CursorTracker() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/CursorTracker.tsx",
-                lineNumber: 52,
+                lineNumber: 65,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2357,7 +2369,7 @@ function CursorTracker() {
                 }
             }, void 0, false, {
                 fileName: "[project]/components/CursorTracker.tsx",
-                lineNumber: 53,
+                lineNumber: 66,
                 columnNumber: 7
             }, this)
         ]
