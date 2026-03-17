@@ -1,0 +1,4 @@
+[00:00:01.803] Server  LOG     ✓ Ready in 1371ms
+[00:00:04.646] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:00:45.362] Server  LOG     ✓ Compiled in 706ms
+[00:02:16.625] Server  LOG     ✓ Compiled in 100ms
