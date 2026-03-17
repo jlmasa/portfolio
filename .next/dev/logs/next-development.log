@@ -7,3 +7,40 @@
 [00:24:37.884] Server  LOG     ✓ Compiled in 78ms
 [00:25:23.664] Server  LOG     ✓ Compiled in 81ms
 [00:25:28.202] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:27:15.007] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:32:13.606] Server  LOG     ✓ Compiled in 198ms
+[00:32:13.722] Browser ERROR   ./components/Navbar.tsx:46:9
+Parsing ecmascript source code failed
+  44 |         className="relative z-50 text-xl tracking-tight text-cream" // ✅ removed invalid font-800 class
+  45 |         style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
+> 46 |         >
+     |         ^
+  47 |         JLMASA<span className="text-[#3B82F6]">.</span>
+  48 |       </a>
+  49 |
+
+Unexpected token. Did you mean `{'>'}` or `&gt;`?
+
+Import trace:
+  Server Component:
+    ./components/Navbar.tsx
+    ./app/page.tsx
+[00:35:09.137] Server  LOG     ✓ Compiled in 85ms
+[00:35:19.232] Server  LOG     ✓ Compiled in 70ms
+[00:37:37.954] Server  LOG     ✓ Compiled in 121ms
+[00:37:55.513] Server  LOG     ✓ Compiled in 80ms
+[00:38:08.123] Server  LOG     ✓ Compiled in 77ms
+[00:38:23.742] Server  LOG     ✓ Compiled in 69ms
+[00:38:37.911] Server  LOG     ✓ Compiled in 76ms
+[00:38:43.036] Server  LOG     ✓ Compiled in 75ms
+[00:39:09.247] Server  LOG     ✓ Compiled in 76ms
+[00:40:11.597] Server  LOG     ✓ Compiled in 71ms
+[00:40:30.216] Server  LOG     ✓ Compiled in 72ms
+[00:40:45.875] Server  LOG     ✓ Compiled in 74ms
+[00:41:06.710] Server  LOG     ✓ Compiled in 74ms
+[00:41:16.224] Server  LOG     ✓ Compiled in 78ms
+[00:45:57.929] Server  LOG     ✓ Compiled in 90ms
+[00:48:15.612] Server  LOG     ✓ Compiled in 82ms
+[00:49:10.327] Server  LOG     ✓ Compiled in 69ms
+[00:49:22.512] Server  LOG     ✓ Compiled in 74ms
+[00:51:16.285] Server  LOG     ✓ Compiled in 85ms

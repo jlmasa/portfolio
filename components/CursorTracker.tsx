@@ -7,9 +7,16 @@ export default function CursorTracker() {
   const cursorRingRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    // Touch/mobile devices don't have a mouse cursor — bail out entirely
+    if (window.matchMedia("(pointer: coarse)").matches) return;
+
     const cursor = cursorRef.current;
     const ring = cursorRingRef.current;
     if (!cursor || !ring) return;
+
+    // Make elements visible now that we know it's a pointer device
+    cursor.style.display = "block";
+    ring.style.display = "block";
 
     let mouseX = 0,
       mouseY = 0;
@@ -39,10 +46,11 @@ export default function CursorTracker() {
     };
   }, []);
 
+  // Hidden by default — shown via JS only on pointer devices above
   return (
     <>
-      <div ref={cursorRef} className="cursor" />
-      <div ref={cursorRingRef} className="cursor-ring" />
+      <div ref={cursorRef} className="cursor" style={{ display: "none" }} />
+      <div ref={cursorRingRef} className="cursor-ring" style={{ display: "none" }} />
     </>
   );
 }
