@@ -1115,6 +1115,10 @@ img, video {
   line-height: 1rem;
 }
 
+.text-\[19px\] {
+  font-size: 19px;
+}
+
 .font-black {
   font-weight: 900;
 }

@@ -405,7 +405,7 @@ function Hero() {
                         style: {
                             animation: "fadeIn 0.8s ease 0.6s both"
                         },
-                        className: "jsx-3690d7cbe468cc4e" + " " + "max-w-2xl text-[#999] text-base md:text-lg leading-relaxed mb-14",
+                        className: "jsx-3690d7cbe468cc4e" + " " + "max-w-2xl text-[#999] text-[19px] md:text-lg leading-relaxed mb-14",
                         children: "I build fast, scalable web applications from pixel-perfect frontends to robust backend systems. Currently focused on React, Node.js, and distributed architectures."
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
@@ -698,7 +698,7 @@ function About() {
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                        className: "jsx-4625ea68ac093846" + " " + "space-y-5 text-[#888] leading-relaxed text-base reveal",
+                                        className: "jsx-4625ea68ac093846" + " " + "space-y-5 text-[#888] leading-relaxed text-[19px] reveal",
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "jsx-4625ea68ac093846",
@@ -730,7 +730,7 @@ function About() {
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "jsx-4625ea68ac093846",
-                                                children: "I am located in Laguna/makati and when I am not coding you'll find me enjoying foods around my hometown."
+                                                children: "I am located in Laguna/Makati and when I am not coding you'll find me enjoying foods around my hometown."
                                             }, void 0, false, {
                                                 fileName: "[project]/components/About.tsx",
                                                 lineNumber: 77,
@@ -933,7 +933,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$re
 const projects = [
     {
         id: "01",
-        title: "Casa De Padrid Online Reservation",
+        title: "Casa De Padrid Online Services",
         description: "Web application used for handling reservation for customers who want catering for their events",
         tags: [
             "Bootstrap",

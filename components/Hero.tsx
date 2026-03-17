@@ -116,7 +116,7 @@ export default function Hero() {
 
         {/* Description */}
         <p
-          className="max-w-2xl text-[#999] text-base md:text-lg leading-relaxed mb-14"
+          className="max-w-2xl text-[#999] text-[19px] md:text-lg leading-relaxed mb-14"
           style={{ animation: "fadeIn 0.8s ease 0.6s both" }}
         >
           I build fast, scalable web applications from pixel-perfect frontends to robust backend

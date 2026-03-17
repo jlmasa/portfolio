@@ -5,7 +5,7 @@ import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
 const projects = [
   {
     id: "01",
-    title: "Casa De Padrid Online Reservation",
+    title: "Casa De Padrid Online Services",
     description:
       "Web application used for handling reservation for customers who want catering for their events",
     tags: ["Bootstrap", "PHP", "MySQL", "Hack"],

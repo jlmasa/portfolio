@@ -62,7 +62,7 @@ export default function About() {
             </h2>
 
             <div
-              className="space-y-5 text-[#888] leading-relaxed text-base reveal"
+              className="space-y-5 text-[#888] leading-relaxed text-[19px] reveal"
             >
               <p>
                 I&apos;m a full-stack developer with over 5 years of experience building
@@ -75,7 +75,7 @@ export default function About() {
                 <span className="text-[#F5F5F0]">fast, accessible, and delightful</span>.
               </p>
               <p>
-                I am located in Laguna/makati and when I am not coding you'll find me enjoying foods around my hometown.
+                I am located in Laguna/Makati and when I am not coding you'll find me enjoying foods around my hometown.
               </p>
             </div>
 

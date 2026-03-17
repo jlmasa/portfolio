@@ -2,3 +2,8 @@
 [00:00:04.646] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
 [00:00:45.362] Server  LOG     ✓ Compiled in 706ms
 [00:02:16.625] Server  LOG     ✓ Compiled in 100ms
+[00:23:54.662] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:24:20.587] Server  LOG     ✓ Compiled in 99ms
+[00:24:37.884] Server  LOG     ✓ Compiled in 78ms
+[00:25:23.664] Server  LOG     ✓ Compiled in 81ms
+[00:25:28.202] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
