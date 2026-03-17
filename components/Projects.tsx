@@ -161,6 +161,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 export default function Projects() {
   return (
     <section id="projects" className="py-32 px-6 md:px-12">
+
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="flex items-center gap-4 mb-20">

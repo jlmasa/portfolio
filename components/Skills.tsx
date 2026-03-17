@@ -112,7 +112,7 @@ export default function Skills() {
             </span>
           </h2>
           <p
-            className="text-sm text-[#555] max-w-xs"
+            className="text-[18px] text-[#555] max-w-xs"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             Technologies I work with daily and have shipped to production.
@@ -150,7 +150,7 @@ export default function Skills() {
         {/* Tools marquee */}
         <div>
           <p
-            className="text-xs text-[#333] tracking-widest uppercase mb-6 text-center"
+            className="text-[18px] text-[#888] tracking-widest uppercase mb-6 text-center"
             style={{ fontFamily: "'JetBrains Mono', monospace" }}
           >
             Tools & Workflow

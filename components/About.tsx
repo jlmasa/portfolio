@@ -80,6 +80,7 @@ export default function About() {
 
   return (
     <section id="about" ref={sectionRef} className="py-32 px-6 md:px-12 relative">
+
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center gap-4 mb-20">
           <span

@@ -57,3 +57,17 @@ Import trace:
 [01:07:31.138] Server  LOG     ✓ Compiled in 76ms
 [01:07:36.587] Browser WARN    Image with src "/picture.jpg" was detected as the Largest Contentful Paint (LCP). Please add the `loading="eager"` property if this image is above the fold.
 Read more: https://nextjs.org/docs/app/api-reference/components/image#loading
+[01:08:07.096] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:08:20.161] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:09:24.528] Server  LOG     ✓ Compiled in 74ms
+[01:09:48.350] Server  LOG     ✓ Compiled in 77ms
+[01:10:19.296] Server  LOG     ✓ Compiled in 75ms
+[01:10:27.911] Server  LOG     ✓ Compiled in 72ms
+[01:10:58.173] Server  LOG     ✓ Compiled in 78ms
+[01:11:17.958] Server  LOG     ✓ Compiled in 79ms
+[01:11:29.722] Server  LOG     ✓ Compiled in 81ms
+[01:11:40.151] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[01:12:07.297] Server  LOG     ✓ Compiled in 86ms
+[01:12:23.641] Server  LOG     ✓ Compiled in 76ms
+[01:12:31.310] Server  LOG     ✓ Compiled in 69ms
+[01:12:53.947] Server  LOG     ✓ Compiled in 80ms

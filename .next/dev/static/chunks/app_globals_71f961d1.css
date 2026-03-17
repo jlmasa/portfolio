@@ -1179,6 +1179,10 @@ img, video {
   font-size: 19px;
 }
 
+.text-\[18px\] {
+  font-size: 18px;
+}
+
 .font-black {
   font-weight: 900;
 }
