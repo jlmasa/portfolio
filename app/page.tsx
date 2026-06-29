@@ -7,6 +7,7 @@ import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import CursorTracker from "@/components/CursorTracker";
+import DemoSiteCard from "@/components/DemoSites";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <DemoSiteCard />
       <Projects />
       <Skills />
       <Experience />
