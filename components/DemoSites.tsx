@@ -11,7 +11,7 @@ const demoSites = [
     category: "Fitness & Wellness",
     description:
       "High-intensity gym landing page with membership plans, class schedules, and trainer profiles. Bold typographic hero with a live burn-target widget.",
-    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
+    tags: ["React js", "Tailwind CSS",],
     image: "/demos/gym.png",
     live: "https://forgegym-ayf.pages.dev/",
     accent: "#CA8A04",
@@ -22,7 +22,7 @@ const demoSites = [
     category: "Fine Dining",
     description:
       "Upscale Filipino restaurant site with editorial typography, reservation flow, and an immersive dark-gold atmosphere.",
-    tags: ["Next.js", "Tailwind CSS"],
+    tags: ["React js", "Tailwind CSS"],
     image: "/demos/restaurant.png",
     live: "https://embersalts.pages.dev/",
     accent: "#C9A84C",
@@ -33,7 +33,7 @@ const demoSites = [
     category: "Coffee Shop",
     description:
       "Specialty coffee ordering site for a Quezon City café sourcing beans from Benguet and Sagada farmers. Features menu browsing and cart.",
-    tags: ["Next.js", "Tailwind CSS"],
+    tags: ["React js", "Tailwind CSS"],
     image: "/demos/coffeeshop.png",
     live: "https://kapenila.pages.dev/",
     accent: "#A0734A",
@@ -44,7 +44,7 @@ const demoSites = [
     category: "Real Estate",
     description:
       "Property listing platform for Metro Manila with search, listing filters, and agent contact. Houses, condos, and commercial spaces.",
-    tags: ["Next.js", "Tailwind CSS"],
+    tags: ["React js", "Tailwind CSS"],
     image: "/demos/real-estate.png",
     live: "https://hannahproperties.pages.dev/",
     accent: "#15803D",
@@ -55,7 +55,7 @@ const demoSites = [
     category: "Glass & Aluminum",
     description:
       "Clean service site for a glass and aluminum specialist. Showcases sliding windows, screen doors, awning types, and kitchen cabinet solutions.",
-    tags: ["Next.js", "Tailwind CSS"],
+    tags: ["React js", "Tailwind CSS"],
     image: "/demos/lpglass.png",
     live: "https://lp-glass.pages.dev/",
     accent: "#0369A1",
@@ -66,7 +66,7 @@ const demoSites = [
     category: "Healthcare",
     description:
       "Dental clinic site with a 4-step appointment booking flow, service selection, doctor profiles, and same-week scheduling.",
-    tags: ["Next.js", "Tailwind CSS"],
+    tags: ["React js", "Tailwind CSS"],
     image: "/demos/dental.png",
     live: "https://pearlsmiledental.pages.dev/",
     accent: "#0F766E",
