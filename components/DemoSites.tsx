@@ -269,8 +269,8 @@ export default function DemoSites() {
             className="text-5xl md:text-6xl font-black leading-none tracking-tighter text-[#F5F5F0]"
             style={{ fontFamily: "'Syne', sans-serif", fontWeight: 800 }}
           >
-            Live
-            <br />
+            Live {" "}
+            {/* <br /> */}
             <span
               className="italic font-normal"
               style={{ fontFamily: "'Playfair Display', serif", color: "#3B82F6" }}

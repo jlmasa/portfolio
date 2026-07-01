@@ -2350,9 +2350,8 @@ const demoSites = [
         category: "Fitness & Wellness",
         description: "High-intensity gym landing page with membership plans, class schedules, and trainer profiles. Bold typographic hero with a live burn-target widget.",
         tags: [
-            "Next.js",
-            "Tailwind CSS",
-            "Framer Motion"
+            "React js",
+            "Tailwind CSS"
         ],
         image: "/demos/gym.png",
         live: "https://forgegym-ayf.pages.dev/",
@@ -2364,7 +2363,7 @@ const demoSites = [
         category: "Fine Dining",
         description: "Upscale Filipino restaurant site with editorial typography, reservation flow, and an immersive dark-gold atmosphere.",
         tags: [
-            "Next.js",
+            "React js",
             "Tailwind CSS"
         ],
         image: "/demos/restaurant.png",
@@ -2377,7 +2376,7 @@ const demoSites = [
         category: "Coffee Shop",
         description: "Specialty coffee ordering site for a Quezon City café sourcing beans from Benguet and Sagada farmers. Features menu browsing and cart.",
         tags: [
-            "Next.js",
+            "React js",
             "Tailwind CSS"
         ],
         image: "/demos/coffeeshop.png",
@@ -2390,7 +2389,7 @@ const demoSites = [
         category: "Real Estate",
         description: "Property listing platform for Metro Manila with search, listing filters, and agent contact. Houses, condos, and commercial spaces.",
         tags: [
-            "Next.js",
+            "React js",
             "Tailwind CSS"
         ],
         image: "/demos/real-estate.png",
@@ -2403,7 +2402,7 @@ const demoSites = [
         category: "Glass & Aluminum",
         description: "Clean service site for a glass and aluminum specialist. Showcases sliding windows, screen doors, awning types, and kitchen cabinet solutions.",
         tags: [
-            "Next.js",
+            "React js",
             "Tailwind CSS"
         ],
         image: "/demos/lpglass.png",
@@ -2416,7 +2415,7 @@ const demoSites = [
         category: "Healthcare",
         description: "Dental clinic site with a 4-step appointment booking flow, service selection, doctor profiles, and same-week scheduling.",
         tags: [
-            "Next.js",
+            "React js",
             "Tailwind CSS"
         ],
         image: "/demos/dental.png",
@@ -2755,12 +2754,8 @@ function DemoSites() {
                                     fontWeight: 800
                                 },
                                 children: [
-                                    "Live",
-                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                                        fileName: "[project]/components/DemoSites.tsx",
-                                        lineNumber: 273,
-                                        columnNumber: 13
-                                    }, this),
+                                    "Live ",
+                                    " ",
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                         className: "italic font-normal",
                                         style: {
