@@ -2951,7 +2951,7 @@ function DemoSites() {
                                         className: "text-[10px] transition-colors duration-300",
                                         style: {
                                             fontFamily: "'JetBrains Mono', monospace",
-                                            color: isHijacked ? "#3B82F6" : "#2A2A2A"
+                                            color: isHijacked ? "#3B82F6" : "#F5F5F0"
                                         },
                                         children: isHijacked ? "↔ scroll active" : "hover to scroll horizontally"
                                     }, void 0, false, {
