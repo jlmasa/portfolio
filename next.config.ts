@@ -3,11 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   // Turbopack is now stable and default in Next.js 16 — no flag needed
   // React Compiler support (stable in v16) — opt-in
-  reactCompiler: false,
 
-  // Image optimization defaults updated in v16
+  output: "export",
+  reactCompiler: false,
   images: {
-    formats: ["image/avif", "image/webp"],
+    unoptimized: true,
   },
 
   // Experimental features available in v16
