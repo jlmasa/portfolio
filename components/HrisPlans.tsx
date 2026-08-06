@@ -34,7 +34,7 @@ const hrisPlans: Plan[] = [
     tier: 1,
     name: "Basic",
     tagline: "Core HR, done right",
-    price: "₱1,499",
+    price: "₱3,499",
     period: "/mo",
     description:
       "Employee records, attendance, and self-service — the essentials a lean team needs to run HR without spreadsheets.",
@@ -53,7 +53,7 @@ const hrisPlans: Plan[] = [
     tier: 2,
     name: "Standard",
     tagline: "For teams that are hiring",
-    price: "₱2,999",
+    price: "₱6,999",
     period: "/mo",
     description:
       "Adds recruitment, benefits, and org structure — built for teams actively growing headcount.",
@@ -73,7 +73,7 @@ const hrisPlans: Plan[] = [
     tier: 3,
     name: "Premium",
     tagline: "Full HR command center",
-    price: "₱4,999",
+    price: "₱9,999",
     period: "/mo",
     description:
       "Payroll, performance, and executive analytics on top of Standard — the complete suite for scaling companies.",
@@ -129,8 +129,8 @@ function PlanCard({ plan }: { plan: Plan }) {
   return (
     <div
       className={`group relative flex flex-col border bg-[#0D0D0D] rounded-xl overflow-hidden transition-all duration-500 h-full ${plan.featured
-          ? "border-[#3B82F6]/40 md:-translate-y-3"
-          : "border-[#1A1A1A] hover:border-[#2A2A2A]"
+        ? "border-[#3B82F6]/40 md:-translate-y-3"
+        : "border-[#1A1A1A] hover:border-[#2A2A2A]"
         }`}
       style={
         plan.featured
