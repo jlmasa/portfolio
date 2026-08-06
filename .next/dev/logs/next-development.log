@@ -9,3 +9,4 @@
 [00:10:50.375] Server  LOG     ✓ Compiled in 62ms
 [00:10:55.108] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
 [00:10:55.284] Browser WARN    Image with src "/picture.jpg" has either width or height modified, but not the other. If you use CSS to change the size of your image, also include the styles 'width: "auto"' or 'height: "auto"' to maintain the aspect ratio.
+[00:13:51.935] Server  LOG     ✓ Compiled in 112ms
