@@ -33,73 +33,73 @@ const hrisPlans: Plan[] = [
     id: "basic",
     tier: 1,
     name: "Basic",
-    tagline: "Core HR for small teams",
+    tagline: "Core HR, done right",
     price: "₱1,499",
     period: "/mo",
     description:
-      "Essential HR tools for small businesses to manage employees, attendance, and basic workforce information.",
+      "Employee records, attendance, and self-service — the essentials a lean team needs to run HR without spreadsheets.",
     image: "/demos/basic.png",
     accent: "#64748B",
     features: [
-      { label: "Up to 25 employees" },
       { label: "Employee records & profiles" },
       { label: "Time & attendance tracking" },
-      { label: "Leave management" },
-      { label: "Basic HR reports" },
-      { label: "Employee self-service portal" },
-      { label: "Email support" },
+      { label: "Self-service employee portal" },
+      { label: "Standard reports" },
     ],
+    live: "https://hris-basic.pages.dev/",
   },
   {
     id: "standard",
     tier: 2,
     name: "Standard",
-    tagline: "For growing organizations",
-    price: "₱3,499",
+    tagline: "For teams that are hiring",
+    price: "₱2,999",
     period: "/mo",
     description:
-      "A complete HR operations platform with recruitment, benefits, workflows, and analytics.",
+      "Adds recruitment, benefits, and org structure — built for teams actively growing headcount.",
     image: "/demos/standard.png",
     accent: "#3B82F6",
     featured: true,
     inherits: "Everything in Basic, plus",
     features: [
-      { label: "Up to 100 employees" },
-      { label: "Benefits management" },
-      { label: "Recruitment management" },
-      { label: "Applicant tracking system" },
-      { label: "Employee onboarding" },
-      { label: "Organization structure" },
-      { label: "Advanced reports & analytics" },
-      { label: "Approval workflows" },
-      { label: "Priority support" },
+      { label: "Benefits administration" },
+      { label: "Recruitment & applicant tracking" },
+      { label: "Team & org structure" },
     ],
+    live: "https://hris-standard.pages.dev/",
   },
   {
     id: "premium",
     tier: 3,
     name: "Premium",
-    tagline: "Complete HR ecosystem",
-    price: "₱6,999",
+    tagline: "Full HR command center",
+    price: "₱4,999",
     period: "/mo",
     description:
-      "Everything needed to manage workforce operations, payroll, performance, and executive insights.",
+      "Payroll, performance, and executive analytics on top of Standard — the complete suite for scaling companies.",
     image: "/demos/premium.png",
     accent: "#D4AF37",
     inherits: "Everything in Standard, plus",
     features: [
-      { label: "Up to 300 employees" },
-      { label: "Payroll management" },
-      { label: "SSS, PhilHealth, Pag-IBIG & BIR support" },
-      { label: "Payslip generation" },
-      { label: "Performance evaluation" },
-      { label: "Advanced executive dashboard" },
-      { label: "Biometric integration" },
-      { label: "API access" },
-      { label: "Dedicated support" },
+      { label: "Payroll processing" },
+      { label: "Performance reviews" },
+      { label: "Executive dashboard" },
     ],
+    live: "https://hris-premium.pages.dev/",
   },
 ];
+
+// NOTE: placeholder inbox — swap for your real contact address.
+const CONTACT_EMAIL = "johnlorenz.masa@gmail.com";
+
+// Builds a mailto: link pre-filled with the plan the visitor is asking about.
+function getMailtoHref(plan: Plan) {
+  const subject = encodeURIComponent(`HRIS ${plan.name} plan inquiry`);
+  const body = encodeURIComponent(
+    `Hi,\n\nI'm interested in the ${plan.name} plan (${plan.price}${plan.period}). Could you share more details?\n\n`
+  );
+  return `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
+}
 
 function TierMeter({ tier, accent }: { tier: number; accent: string }) {
   return (
@@ -124,9 +124,7 @@ function TierMeter({ tier, accent }: { tier: number; accent: string }) {
 }
 
 function PlanCard({ plan }: { plan: Plan }) {
-  const handleClick = () => {
-    if (plan.live) window.open(plan.live, "_blank", "noopener,noreferrer");
-  };
+  const mailtoHref = getMailtoHref(plan);
 
   return (
     <div
@@ -134,13 +132,11 @@ function PlanCard({ plan }: { plan: Plan }) {
           ? "border-[#3B82F6]/40 md:-translate-y-3"
           : "border-[#1A1A1A] hover:border-[#2A2A2A]"
         }`}
-      style={{
-        cursor: plan.live ? "pointer" : "default",
-        ...(plan.featured
+      style={
+        plan.featured
           ? { boxShadow: "0 0 60px -15px rgba(59,130,246,0.25)" }
-          : {}),
-      }}
-      onClick={handleClick}
+          : undefined
+      }
     >
       {plan.featured && (
         <div
@@ -172,7 +168,6 @@ function PlanCard({ plan }: { plan: Plan }) {
             href={plan.live}
             target="_blank"
             rel="noopener noreferrer"
-            onClick={(e) => e.stopPropagation()}
             className="text-[#444] hover:text-[#888] transition-colors"
           >
             <ExternalLink size={10} />
@@ -248,20 +243,39 @@ function PlanCard({ plan }: { plan: Plan }) {
           </ul>
         </div>
 
-        {/* TODO: wire up to real signup / contact flow */}
-        <button
-          onClick={(e) => e.stopPropagation()}
-          className="mt-2 w-full flex items-center justify-center gap-2 py-3 text-[12px] tracking-widest uppercase rounded-lg border transition-all duration-300"
-          style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            borderColor: plan.accent + "55",
-            color: plan.featured ? "#0A0A0A" : plan.accent,
-            background: plan.featured ? plan.accent : "transparent",
-          }}
-        >
-          Get started
-          <ArrowUpRight size={13} />
-        </button>
+        {/* Two CTAs: secondary "View demo" (only if a live URL is set) + primary "Get started" (mailto) */}
+        <div className="mt-2 flex gap-3">
+          {plan.live && (
+            <a
+              href={plan.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 flex items-center justify-center gap-2 py-3 text-[12px] tracking-widest uppercase rounded-lg border transition-all duration-300"
+              style={{
+                fontFamily: "'JetBrains Mono', monospace",
+                borderColor: plan.accent + "55",
+                color: plan.accent,
+                background: "transparent",
+              }}
+            >
+              View demo
+              <ExternalLink size={13} />
+            </a>
+          )}
+          <a
+            href={mailtoHref}
+            className="flex-1 flex items-center justify-center gap-2 py-3 text-[12px] tracking-widest uppercase rounded-lg border transition-all duration-300"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              borderColor: plan.accent + "55",
+              color: "#0A0A0A",
+              background: plan.accent,
+            }}
+          >
+            Get started
+            <ArrowUpRight size={13} />
+          </a>
+        </div>
       </div>
     </div>
   );
