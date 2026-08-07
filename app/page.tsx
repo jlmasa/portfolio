@@ -21,7 +21,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
-      <HRISPlans />
+      {/* <HRISPlans /> */}
       <DemoSiteCard />
       <Projects />
       <Skills />
